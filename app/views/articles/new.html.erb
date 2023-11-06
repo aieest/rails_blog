@@ -7,7 +7,7 @@
     <div class="new-article-form-container d-flex flex-column">
       <%= f.text_field :title, placeholder: 'Title', class: 'article-title-form'%>
       <%= f.text_area :description, placeholder: 'Description', class: 'article-description-form'%>
-      <%= f.submit %>
+      <%= f.submit class: 'article-submit-btn btn btn-success'%>
     </div>
   <% end %>
 
