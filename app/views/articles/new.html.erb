@@ -1,0 +1,14 @@
+<section class="new-article d-flex flex-column">
+
+  <h1 class="new-article-header">Create an article</h1>
+
+
+  <%= form_for @article do |f| %>
+    <div class="new-article-form-container d-flex flex-column">
+      <%= f.text_field :title, placeholder: 'Title', class: 'article-title-form'%>
+      <%= f.text_area :description, placeholder: 'Description', class: 'article-description-form'%>
+    </div>
+  <% end %>
+
+
+</section>

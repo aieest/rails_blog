@@ -11,6 +11,16 @@
   </head>
 
   <body>
+  <header>
+    <nav>
+      <%= link_to 'Home', root_path %>
+      <%= link_to 'About', about_path %>
+    </nav>
+  </header>
+
+  <main class="d-flex justify-content-center align-items-center flex-column" >
     <%= yield %>
+  </main>
+
   </body>
 </html>
