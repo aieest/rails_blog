@@ -1,0 +1,15 @@
+
+
+<section class="edit-article d-flex flex-column">
+
+  <h1 class="edit-article-header">Edit Article</h1>
+
+  <%= form_for @article, data:{turbo:false } do |f| %>
+    <div class="edit-article-form-container d-flex flex-column">
+      <%= f.text_field :title, placeholder: 'Title', class: 'article-title-form'%>
+      <%= f.text_area :description, placeholder: 'Description', class: 'article-description-form'%>
+      <%= f.submit class: 'article-submit-btn btn btn-success'%>
+    </div>
+  <% end %>
+
+</section>
