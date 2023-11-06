@@ -18,7 +18,22 @@
     </nav>
   </header>
 
-  <main class="d-flex justify-content-center align-items-center flex-column" >
+  <main class="d-flex justify-content-center align-items-center flex-column" >\
+    <% flash.each do |name, msg| %>
+      <ul>
+        <li><%= msg %></li>
+      </ul>
+    <% end %>
+
+    <% if @article.errors.any? %>
+      <h2>The following errors prevented the article from saving:</h2>
+      <ul>
+        <% @article.errors.full_messages.each do |msg|%>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
     <%= yield %>
   </main>
 
